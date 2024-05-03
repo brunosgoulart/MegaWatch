@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from datetime import datetime
+from datetime import datetime, timedelta
 from core.models import HDPO
 
 # Create your views here.
@@ -38,9 +38,11 @@ def EnergyUpdate(request):
     return render (request, 'energy-update.html', new_energy_dictionary)
     
 def DailyEnergy(request):
-    dataFromDailyEnergy = HDPO.objects.values_list("DjangoTimeStamp", "PowerActive", "PowerReactive", "Level").order_by("-DjangoTimeStamp")[:10]
-    BiggerThan = HDPO.objects.filter(Level__gt=10)
-    #work with dates!
+    dateReference = str(datetime.now().year) + "-" + str(datetime.now().month) + "-" + str(datetime.now().day)
+    dateReference = datetime.strptime(dateReference, '%Y-%m-%d')
+    dateReference = dateReference + timedelta(days=-1)
+    dataFromDailyEnergy = HDPO.objects.values_list("DjangoTimeStamp", "PowerActive", "PowerReactive", "Level").filter(DjangoTimeStamp__gte=dateReference).order_by("-DjangoTimeStamp")[:24]
+    #BiggerThan = HDPO.objects.filter(Level__gt=10)
     dictionaryDailyEnergy = {
         'dataFromDailyEnergy': dataFromDailyEnergy
     }
