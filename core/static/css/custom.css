@@ -1,0 +1,19 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mytitle {
+    justify-content: center;
+    background-color: whitesmoke;
+    font-weight: bold;
+    border-collapse: separate;
+    border-width: 100;
+    border-style: dashed;
+    border-spacing: 10px;
+}
+
+.mydata {
+    text-align: center;
+    background-color: lightgray;
+    width: 1000;
+}
