@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Energy</title>
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <script src="{% static 'js/myscripts.js' %}"></script>
 </head>
+
 <body>
     <h1>
         Geração de ontem
+        <p id="currentTime">Que horas são?</p>
+        <button onclick="myFunction()">Show Current Time!</button>
     </h1>
     <h0>
         <table>
