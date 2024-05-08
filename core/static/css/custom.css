@@ -2,6 +2,44 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+header {
+    width: 100%;
+    color: #3C5B6F;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header nav ul a {
+    background-color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #153448;
+}
+
+h1 {
+    background-color: lightblue;
+    font-size: large;
+}
+
+h2 {
+    background-color: black;
+    color: gray;
+    font-size: medium;
+}
+
+h4 {
+    font-size: xx-small;
+}
+
+header nav ul a:hover {
+    border-bottom: 1px dotted orange;
+    font-size: 25px;
+}
+
 .mytitle {
     justify-content: center;
     background-color: whitesmoke;

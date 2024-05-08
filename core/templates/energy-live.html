@@ -1,16 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Live</title>
-</head>
-<body>
-    <h1> Última Medição: {{TS}} </h1>  
-    <h1> {{MW}} MW </h1>
-    <h1> {{Mvar}} Mvar </h1>
-    <h1> {{Level}} m </h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Energy Live</title>
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <a href=" ">Energy Live</a>
+                </ul>
+                <ul>
+                    <a href="energy-daily">Energy Daily</a>
+                </ul>
+                <ul>
+                    <a href="energy-update">Energy Update</a>
+                </ul>
+            </nav>
+        </header>
+        <h1>
+            Última Medição: {{TS}}
+        </h1>
+        <h2>
+            {{MW}} MW <br>
+            {{Mvar}} Mvar <br>
+            {{Level}} m <br>
+        </h2>
 
-    <h4>Hora atual: {{CurrentTime}}</h4>
-</body>
+        <h4>Hora atual: {{CurrentTime}}</h4>
+    </body>
 </html>

@@ -1,41 +1,45 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Energy</title>
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <script src="{% static 'js/myscripts.js' %}"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily Energy</title>
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <script src="{% static 'js/myscripts.js' %}"></script>
+    </head>
 
-<body>
-    <h1>
-        Geração de ontem
-        <p id="currentTime">Que horas são?</p>
-        <button onclick="myFunction()">Show Current Time!</button>
-    </h1>
-    <h0>
-        <table>
-            <div class="mytitle">
-                <tr>
-                    <th>Data/Hora</th>
-                    <th>Potência Ativa</th>
-                    <th>Potência Reativa</th>
-                    <th>Nível</th>
-                </tr>
-            </div>
-            <div class="mydata">
-            {% for data in dataFromDailyEnergy %}
-                <tr class="mydata">
-                    <td>{{ data.0}}</td>
-                    <td>{{ data.1 }} MW</td>
-                    <td>{{ data.2 }} Mvar</td>
-                    <td>{{ data.3 }} m</td>
-                </tr>
-            {% endfor%}
-            </div>
-        </table>
-    </h0>
-</body>
+    <body>
+        <h1>
+            Geração de ontem
+            <button onclick="showPS5()">Show PS5</button>
+            <button onclick="hidePS5()">Hide PS5</button>
+        </h1>
+        <h0>
+            <table>
+                <div class="mytitle">
+                    <tr>
+                        <th>Data/Hora</th>
+                        <th>Potência Ativa</th>
+                        <th>Potência Reativa</th>
+                        <th>Nível</th>
+                    </tr>
+                </div>
+                <div class="mydata">
+                    {% for data in dataFromDailyEnergy %}
+                    <tr class="mydata">
+                        <td>{{ data.0}}</td>
+                        <td>{{ data.1 }} MW</td>
+                        <td>{{ data.2 }} Mvar</td>
+                        <td>{{ data.3 }} m</td>
+                    </tr>
+                    {% endfor%}
+                </div>
+            </table>
+        </h0>
+        <div id="ps5">
+            <img src="{% static 'pictures/ps5.jpg' %}" height="250 px"
+                width="250 px">
+        </div>
+    </body>
 </html>

@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from core.models import HDPO
 
 # Create your views here.
+# python manage.py livereload
 def Energy(request):
     WhatHourAreNow = datetime.now()
     ActualValues = HDPO.objects.all().order_by("-DjangoTimeStamp")
