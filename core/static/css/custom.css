@@ -3,41 +3,52 @@ body {
 }
 
 header {
+    background-color: rgba(211, 211, 211, 0.822);
     width: 100%;
-    color: #3C5B6F;
 }
 
-header nav {
+header nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
+    justify-content: space-around;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header nav ul a {
-    background-color: lightgray;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #153448;
-}
-
-h1 {
-    background-color: lightblue;
-    font-size: large;
-}
-
-h2 {
-    background-color: black;
-    color: gray;
-    font-size: medium;
-}
-
-h4 {
-    font-size: xx-small;
+    text-decoration: none;
+    color: rgba(0, 0, 133, 0.904);
+    font-weight: bold;
 }
 
 header nav ul a:hover {
-    border-bottom: 1px dotted orange;
-    font-size: 25px;
+    background-color: rgb(196, 196, 196);
+}
+
+h1 {
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+table tr th {
+    background-color: gray;
+    text-align: center;
+    width: auto;
+    padding: 5%;
+
+}
+
+table tr td {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 2%;
+}
+
+.currentTime {
+    font-size: xx-small;
+}
+
+.measurementTime {
+    font-size: small;
 }
 
 .mytitle {

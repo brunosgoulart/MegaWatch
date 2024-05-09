@@ -9,27 +9,33 @@
     </head>
     <body>
         <header>
+            <br>
             <nav>
                 <ul>
                     <a href=" ">Energy Live</a>
-                </ul>
-                <ul>
                     <a href="energy-daily">Energy Daily</a>
-                </ul>
-                <ul>
                     <a href="energy-update">Energy Update</a>
                 </ul>
             </nav>
+        </br>
         </header>
-        <h1>
+        <h1 class="measurementTime">
             Última Medição: {{TS}}
         </h1>
-        <h2>
-            {{MW}} MW <br>
-            {{Mvar}} Mvar <br>
-            {{Level}} m <br>
-        </h2>
 
-        <h4>Hora atual: {{CurrentTime}}</h4>
+        <table>
+            <tr>
+                <th> Potência Ativa </th>
+                <th> Potência Reativa </th>
+                <th> Nível do Reservatório </th>
+            </tr>
+            <tr>
+                <td>{{MW}} MW</td>
+                <td>{{Mvar}} Mvar</td>
+                <td>{{Level}} m</td>
+
+            </tr>
+        </table>
+        <h1 class="currentTime">Hora atual: {{CurrentTime}}</h4>
     </body>
 </html>
